@@ -4,7 +4,6 @@ import { log } from "console";
 import { Dialog } from "@headlessui/react";
 import { useEffect, useState } from "react";
 import { parseISO } from "date-fns";
-import RejectReason from "../RejectReason";
 
 interface Appointment {
 	statusId: string;
@@ -64,35 +63,6 @@ export default function AppointmentCard(props: { appointment: Appointment }) {
 			}),
 		});
 	};
-
-	//   const reject = async (id: string) => {
-	//     try {
-	//       const rejectAppointmentUrl = "api/appointment/${id}";
-
-	//       const response = await fetch(rejectAppointmentUrl, {
-	//         method: "PATCH",
-	//         headers: {
-	//           "Content-Type": "application/json",
-	//         }
-	//         body: JSONawait appointment.update({
-	//           where: { id },
-	//           data: { status: "e209365d-44ef-4c5d-8eea-42c827dbaeb1" },
-	//         });
-	//       })
-
-	//       if (response.status === 204) {
-	//         return {
-	//           status: "success",
-	//           message: "Appointment with ID ${id} has been rejected",
-	//         };
-	//       } else
-
-	//       if
-	//     } catch (error) {
-	//       console.log(error);
-	//     }
-	//     setIsAccepted("rejected");
-	//   };
 
 	return (
 		<div
