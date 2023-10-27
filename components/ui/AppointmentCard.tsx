@@ -67,7 +67,7 @@ export default function AppointmentCard(props: { appointment: Appointment }) {
 	return (
 		<div
 			className={`flex gap-4 w-full bg-[#d9d9d9]/30 rounded-lg p-6 mb-4 ${
-				props.appointment.statusId == "e209365d-44ef-4c5d-8eea-42c827dbaeb1" ? "hidden" : null
+				props.appointment.statusId == "87840fe0-4da6-48f6-9cf0-b868cfeb34fa" ? "hidden" : null
 			}`}
 		>
 			{/* PICTURE */}
