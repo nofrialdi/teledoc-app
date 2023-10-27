@@ -26,7 +26,7 @@ const PatientProfile: React.FC = () => {
 		<div className="flex items-center justify-center w-screen px-4 py-4 bg-white h-fit ">
 			<form className="w-full max-w-[400px] flex flex-col items-center gap-4 py-4 ">
 				<nav className="relative flex items-center justify-center w-full">
-					<a href="./" className="absolute left-0">
+					<a href="/home/patient" className="absolute left-0">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
