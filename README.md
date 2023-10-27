@@ -54,6 +54,8 @@ View Design UI/UX with : [Figma](https://www.figma.com/file/pmSQlFUXeCbQ2Y5o932K
 - Can log in using a Google account
 - has a search feature to find a doctor
 - Responsive design for seamless use on any device
+- When the doctor chooses to reject an appointment, the doctor must give the patient the reason for the rejection
+- The patient can see the appointment history. If the appointment is rejected by the doctor, the patient can see the reason for the rejection
 
 ## Installation
 
@@ -89,7 +91,9 @@ To run Media Maven on your local machine, follow these steps:
 
 ![Vercel](https://vercelbadge.vercel.app/api/StarSheriff2/nextjs-pokemon-search-app)
 
-- Deployed to Vercel: [Live Demo](https://www.teledoc.tech/login)
+<!-- - Deployed to Vercel: [Live Demo](https://www.teledoc.tech/login) -->
+
+- Deployed to Vercel: [Live Demo](https://teledoc-app-v2.vercel.app/login)
 
 ## Endpoints
 
