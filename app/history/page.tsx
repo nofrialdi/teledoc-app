@@ -5,6 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 interface Appointment {
+	reason: string;
 	status: {
 		name: string;
 	};
@@ -25,6 +26,7 @@ const History: React.FC = () => {
 	async function fetchHistory() {
 		try {
 			const response = await axios.get("../../api/users/me");
+			//   console.log(response.data.data.user.patientAppointments.status);
 
 			setHistory(response.data.data.user.patientAppointments);
 
@@ -38,7 +40,7 @@ const History: React.FC = () => {
 	useEffect(() => {
 		fetchHistory();
 		console.log(history);
-	}, [history]);
+	}, []);
 
 	const mapped = history?.map((appointment, index) => (
 		<div key={index} className="flex justify-center items-center py-4 px-8">
@@ -85,6 +87,9 @@ const History: React.FC = () => {
 						>
 							{appointment.status.name}
 						</p>
+						{appointment.status.name == "rejected" && (
+							<p className="text-sm">({appointment.reason})</p>
+						)}
 					</div>
 				</div>
 			</div>

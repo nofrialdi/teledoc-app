@@ -29,7 +29,7 @@ export default function Appointment({ params }: { params: { id: string } }) {
 	const [doctorId, setDoctorId] = useState("");
 	const [date, setDate] = React.useState<Date | null>(null);
 	const [userProfile, setUserProfile] = useState<Profile>();
-	const [statusId, setStatusId] = useState("23ba40d0-6c82-4d45-8b5c-21f8d70b959b");
+	const [statusId, setStatusId] = useState("e80e48a7-c830-4505-920d-642ab8778f1d");
 
 	const getUserProfile = async () => {
 		const response = await axios.get("../../api/users/me");
