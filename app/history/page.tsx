@@ -74,6 +74,7 @@ const History: React.FC = () => {
 							{appointment.doctor.doctor?.username}
 						</h1>
 						<p className="text-black">{appointment.doctor.doctor?.specialist.title}</p>
+
 						<p
 							className={`${
 								appointment.status.name == "pending"
@@ -82,13 +83,17 @@ const History: React.FC = () => {
 									? "text-[#4FC3F7] "
 									: appointment.status.name == "done"
 									? "text-[#81C784]"
-									: "text-[#858585]"
-							} font-bold text-m mt-5`}
+									: "text-[#fc4a4a]"
+							} font-bold text-m`}
 						>
 							{appointment.status.name}
 						</p>
 						{appointment.status.name == "rejected" && (
-							<p className="text-sm">({appointment.reason})</p>
+							<p className="text-sm text-[#fc4a4a]">Reject reason :</p>
+						)}
+
+						{appointment.status.name == "rejected" && (
+							<p className="text-sm text-[#fc4a4a]">{appointment.reason}</p>
 						)}
 					</div>
 				</div>
